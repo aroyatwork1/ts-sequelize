@@ -12,7 +12,7 @@ const q = require('better-queue');
 // Init shared
 const router = Router();
 const userDao = new UserDao();
-const limiter = new RateLimiter(15, 'minute', true);
+const limiter = new RateLimiter(15, 'second', true);
 const delegateQ = new q(helper, { concurrent: 1 });
 
 /******************************************************************************

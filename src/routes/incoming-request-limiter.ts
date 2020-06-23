@@ -3,7 +3,7 @@ import { Request, Response } from 'express'
 
 const rateLimiter = new RateLimiterMemory({
     keyPrefix: 'middleware',
-    points: 20,
+    points: 16,
     duration: 1
 });
 
