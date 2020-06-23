@@ -1,0 +1,41 @@
+{
+  "local": {
+    "username": "sa",
+    "password": "Pass@123",
+    "database": "calendar",
+    "host": "localhost",
+    "dialect": "mssql",
+    "dialectOptions": {
+      "instanceName": "NOICLT37171\\SQLEXPRESS",
+      "options":{
+          "encrypt": true
+      }
+    },
+    "port": 50945,
+    "seederStorage": "sequelize"
+  },
+    "dev03": {
+      "username": "sa",
+      "password": "Pass@123",
+      "database": "calendar",
+      "host": "localhost",
+      "dialect": "mssql",
+      "seederStorage": "sequelize"
+    },
+    "ciddevelop": {
+      "username": "sa",
+      "password": "Pass@123",
+      "database": "calendar",
+      "host": "localhost",
+      "dialect": "mssql",
+      "seederStorage": "sequelize"
+    },
+    "master": {
+      "username": "sa",
+      "password": "Pass@123",
+      "database": "calendar",
+      "host": "localhost",
+      "dialect": "mssql",
+      "seederStorage": "sequelize"
+    }
+  }
