@@ -2,24 +2,16 @@ import { Request, Response } from 'express';
 
 import { DelegateQueue } from '../shared/delegateQueue';
 import { DelegateQueueManager } from '../shared/queueManager';
+import { getAccessToken } from '../shared/ms.graph.helper';
 
 function getRandInt(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// This function will ultimetly test db and go to MS graph if necessary
-// and update db
-function getTokenFromMSGraph(seconds: number) {
-    return new Promise((resolve, reject) => {
-        setTimeout(resolve, seconds * 1000);
-    });
-}
-
 function helper(input: any, cb: any) {
     // Simulating MS Graph API
-    getTokenFromMSGraph(getRandInt(2, 5)).then(() => {
-        if (!cb) console.error("CB undefined");
-        cb(null, {});
+    getAccessToken((err: Error, data: any) => {
+        cb(err, data);
     });
 }
 
