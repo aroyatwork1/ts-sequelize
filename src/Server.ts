@@ -8,10 +8,57 @@ import { BAD_REQUEST } from 'http-status-codes';
 import 'express-async-errors';
 
 import BaseRouter from './routes';
-import logger from '@shared/Logger';
+import logger from './shared/Logger';
 
 import { DBConnection } from './database/DBConnection';
+import { EventEmitter } from 'events';
 
+// Global Config Init
+const delegateData = [
+    {
+        id: 1,
+        delegateName: 'some-delegate-1',
+        delegateEmail: 'delegate1@company.com',
+    },
+    {
+        id: 2,
+        delegateName: 'some-delegate-1',
+        delegateEmail: 'delegate12@company.com',
+    },
+    {
+        id: 3,
+        delegateName: 'some-delegate-1',
+        delegateEmail: 'delegate13@company.com',
+    },
+    {
+        id: 4,
+        delegateName: 'some-delegate-1',
+        delegateEmail: 'delegate14@company.com',
+    },
+    {
+        id: 5,
+        delegateName: 'some-delegate-1',
+        delegateEmail: 'delegate15@company.com',
+    },
+    {
+        id: 6,
+        delegateName: 'some-delegate-1',
+        delegateEmail: 'delegate16@company.com',
+    },
+    {
+        id: 7,
+        delegateName: 'some-delegate-1',
+        delegateEmail: 'delegate17@company.com',
+    },
+    {
+        id: 8,
+        delegateName: 'some-delegate-1',
+        delegateEmail: 'delegate18@company.com',
+    },
+];
+
+(global as any).delegateAcounts = delegateData;
+(global as any).emitter = new EventEmitter();
 
 // Init express
 const app = express();

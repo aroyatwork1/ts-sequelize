@@ -1,0 +1,54 @@
+import { Request, Response } from 'express';
+
+import { DelegateQueue } from '../shared/delegateQueue';
+import { DelegateQueueManager } from '../shared/queueManager';
+
+function getRandInt(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// This function will ultimetly test db and go to MS graph if necessary
+// and update db
+function getTokenFromMSGraph(seconds: number) {
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, seconds * 1000);
+    });
+}
+
+function helper(input: any, cb: any) {
+    // Simulating MS Graph API
+    getTokenFromMSGraph(getRandInt(2, 5)).then(() => {
+        if (!cb) console.error("CB undefined");
+        cb(null, {});
+    });
+}
+
+export function enqeueRequest(req: Request, res: Response, next: any) {
+    const delegateAccounts: any[] = (global as any).delegateAcounts;
+    const delegateAcountLength = delegateAccounts.length;
+    const index = getRandInt(0, delegateAcountLength);
+
+    (async (index) => {
+        if (index % 2 == 0) { // Simulating scenario when Token has not expired
+            next();
+        } else { // Simulating scenario when token has expired
+            const q: DelegateQueue = DelegateQueueManager.getQueue(delegateAccounts[index].delegateEmail, helper);
+
+            (() => {
+                console.log(`********** Enqueueing request for delegate account ${delegateAccounts[index].delegateEmail} **********`);
+                q.enqueue(req, res)
+                .on('finish', (result: any[]) => {
+                    console.log(`********** Request completed for delegate account ${delegateAccounts[index].delegateEmail} **********`);
+                    next();
+                })
+                .on('failed', (err: Error) => {
+                    if (err.message == '429') {
+                        return res.status(429).send('Too many request');
+                    } else {
+                        return res.status(400).send(err.message);
+                    }
+                });
+            })();
+        }
+    })(index);
+}

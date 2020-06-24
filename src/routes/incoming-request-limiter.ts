@@ -14,7 +14,7 @@ export function thyShallNotPass (req: Request, res: Response, next: any) {
         })
         .catch((err) => {
             res.setHeader('Retry-After', err.msBeforeNext / 1000);
-            res.setHeader('X-RateLimit-Limit', 10);
+            res.setHeader('X-RateLimit-Limit', 16);
             res.setHeader('X-RateLimit-Remaining', err.remainingPoints);
             res.setHeader('X-RateLimit-Reset', new Date(Date.now() + err.msBeforeNext).toISOString());
             res.status(429).send('Slow it down buddy!');

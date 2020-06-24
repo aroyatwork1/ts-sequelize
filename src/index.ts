@@ -1,6 +1,6 @@
 import './LoadEnv'; // Must be the first import
-import app from '@server';
-import logger from '@shared/Logger';
+import app from './Server';
+import logger from './shared/Logger';
 import { DBConnection } from './database/DBConnection'
 
 async function main() {
