@@ -29,7 +29,7 @@ export function enqeueRequest(req: Request, res: Response, next: any) {
             (() => {
                 console.log(`********** Enqueueing request for delegate account ${delegateAccounts[index].delegateEmail} **********`);
                 q.enqueue(req, res)
-                .on('finish', (result: any[]) => {
+                .on('finish', (result: any) => {
                     console.log(`********** Request completed for delegate account ${delegateAccounts[index].delegateEmail} **********`);
                     next();
                 })
