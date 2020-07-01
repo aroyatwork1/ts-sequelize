@@ -63,6 +63,8 @@ const delegateData = [
 // Init express
 const app = express();
 
+// Increase Default worker threadpool, in case we do lots of DNS resoultions under heavy load
+(process.env.UV_THREADPOOL_SIZE as any) = 128
 
 /************************************************************************************
  *                              Set basic express settings

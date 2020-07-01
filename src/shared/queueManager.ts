@@ -13,7 +13,7 @@ export class DelegateQueueManager {
         if (!DelegateQueueManager._qHash[delegateEmail]) {
             DelegateQueueManager._qHash[delegateEmail] = new DelegateQueue(delegateEmail, cb);
         } else {
-            console.log(`^^^^^^^^^^ Queue exists for delegate ${delegateEmail} ^^^^^^^^^^`);
+            console.log(`[${process.pid}]::[${new Date().toISOString()}] ^^^^^^^^^^ Queue exists for delegate ${delegateEmail} ^^^^^^^^^^`);
         }
 
         return DelegateQueueManager._qHash[delegateEmail];

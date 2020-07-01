@@ -3,11 +3,12 @@ import { Request, Response } from 'express'
 
 const rateLimiter = new RateLimiterMemory({
     keyPrefix: 'middleware',
-    points: 16,
+    points: 7000,
     duration: 1
 });
 
 export function thyShallNotPass (req: Request, res: Response, next: any) {
+    // This function can be augmented by ip + tenant + delegateAccountId
     rateLimiter.consume(req.ip)
         .then(() => {
             next();
