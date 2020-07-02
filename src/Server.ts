@@ -19,45 +19,53 @@ const delegateData = [
         id: 1,
         delegateName: 'some-delegate-1',
         delegateEmail: 'delegate1@company.com',
+        isExpired: 'expired'
     },
     {
         id: 2,
         delegateName: 'some-delegate-1',
         delegateEmail: 'delegate12@company.com',
+        isExpired: 'expired'
     },
     {
         id: 3,
         delegateName: 'some-delegate-1',
         delegateEmail: 'delegate13@company.com',
+        isExpired: 'expired'
     },
     {
         id: 4,
         delegateName: 'some-delegate-1',
         delegateEmail: 'delegate14@company.com',
+        isExpired: 'expired'
     },
     {
         id: 5,
         delegateName: 'some-delegate-1',
         delegateEmail: 'delegate15@company.com',
+        isExpired: 'expired'
     },
     {
         id: 6,
         delegateName: 'some-delegate-1',
         delegateEmail: 'delegate16@company.com',
+        isExpired: 'expired'
     },
     {
         id: 7,
         delegateName: 'some-delegate-1',
         delegateEmail: 'delegate17@company.com',
+        isExpired: 'expired'
     },
     {
         id: 8,
         delegateName: 'some-delegate-1',
         delegateEmail: 'delegate18@company.com',
+        isExpired: 'expired'
     },
 ];
 
-(global as any).delegateAcounts = delegateData;
+(global as any).delegateAccounts = delegateData;
 (global as any).emitter = new EventEmitter();
 
 // Init express
