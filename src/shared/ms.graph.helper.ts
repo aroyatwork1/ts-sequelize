@@ -58,7 +58,6 @@ function helper(input: { index: number }, cb: any) {
                     call_ms_graph(index);
                     cb(null, []); // Send some dummy data
                 } else {
-                    console.error(new Error("Woah!! Did not expect to reach here for index " + index));
                     cb(new Error('500'),  null); // Woah!! Did not expect to reach here ! 
                 }
             } catch(e) {
@@ -71,7 +70,9 @@ function helper(input: { index: number }, cb: any) {
 }
 
 function call_ms_graph(index: number) {
-    sleep(5).then(() => {
+    // A large window of 60 second is taken due to the fact that it may be the case that MS GRpah
+    // API may demand a re attempt
+    sleep(60).then(() => {
         (global as any).delegateAccounts[index].isExpired = 'available';
     });
 }
