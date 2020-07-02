@@ -1,0 +1,351 @@
+Statistical profiling result from isolate-0000025C4535A760-v8.log, (152863 ticks, 2263 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  146381   95.8%          C:\WINDOWS\SYSTEM32\ntdll.dll
+   3708    2.4%          D:\Installs\node\node.exe
+    176    0.1%          D:\Installs\Cmder\vendor\conemu-maximus5\ConEmu\ConEmuHk64.dll
+    139    0.1%          C:\WINDOWS\System32\KERNELBASE.dll
+    108    0.1%          C:\WINDOWS\System32\KERNEL32.DLL
+     45    0.0%          C:\WINDOWS\System32\WS2_32.dll
+     23    0.0%          C:\Program Files\Avecto\Privilege Guard Client\PGHook.dll
+     18    0.0%          C:\WINDOWS\system32\mswsock.dll
+      2    0.0%          C:\WINDOWS\SYSTEM32\WINMM.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      0    0.0%    0.0%  JavaScript
+      0    0.0%    0.0%  C++
+    568    0.4%   25.1%  GC
+  150600   98.5%          Shared libraries
+   2263    1.5%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  146381   95.8%  C:\WINDOWS\SYSTEM32\ntdll.dll
+   1941    1.3%    LazyCompile: ~logRequest D:\node\calendar-model-setup\node_modules\morgan\index.js:116:25
+   1666   85.8%      LazyCompile: ~listener D:\node\calendar-model-setup\node_modules\on-finished\index.js:161:20
+   1600   96.0%        LazyCompile: ~onFinish D:\node\calendar-model-setup\node_modules\on-finished\index.js:95:20
+   1386   86.6%          LazyCompile: ~callback D:\node\calendar-model-setup\node_modules\ee-first\index.js:53:20
+   1378   99.4%            LazyCompile: ~onevent D:\node\calendar-model-setup\node_modules\ee-first\index.js:81:26
+    214   13.4%          LazyCompile: ~onevent D:\node\calendar-model-setup\node_modules\ee-first\index.js:81:26
+     90   42.1%            LazyCompile: ~onFinish _http_outgoing.js:719:18
+     66    4.0%        LazyCompile: ~callback D:\node\calendar-model-setup\node_modules\ee-first\index.js:53:20
+     66  100.0%          LazyCompile: ~onevent D:\node\calendar-model-setup\node_modules\ee-first\index.js:81:26
+     19   28.8%            LazyCompile: ~onFinish _http_outgoing.js:719:18
+    275   14.2%      LazyCompile: ~onFinish D:\node\calendar-model-setup\node_modules\on-finished\index.js:95:20
+    233   84.7%        LazyCompile: ~callback D:\node\calendar-model-setup\node_modules\ee-first\index.js:53:20
+    233  100.0%          LazyCompile: ~onFinish _http_outgoing.js:719:18
+     42   15.3%        LazyCompile: ~onevent D:\node\calendar-model-setup\node_modules\ee-first\index.js:81:26
+
+   3708    2.4%  D:\Installs\node\node.exe
+   1953   52.7%    D:\Installs\node\node.exe
+    479   24.5%      LazyCompile: ~createWriteReq net.js:790:24
+    479  100.0%        LazyCompile: ~Socket._writeGeneric net.js:715:42
+    479  100.0%          LazyCompile: ~Socket._write net.js:786:35
+    185   38.6%            LazyCompile: ~doWrite _stream_writable.js:388:17
+    184   38.4%            LazyCompile: ~Socket.write net.js:706:34
+    110   23.0%            LazyCompile: ~Writable.write _stream_writable.js:264:36
+    141    7.2%      LazyCompile: ~createScript vm.js:79:22
+    141  100.0%        LazyCompile: ~runInThisContext vm.js:138:26
+    141  100.0%          LazyCompile: ~Module._compile module.js:610:37
+    141  100.0%            LazyCompile: ~Module._extensions..js module.js:662:37
+     85    4.4%      LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\Users.js:13:162
+     35   41.2%        LazyCompile: ~fulfilled D:\node\calendar-model-setup\node_modules\tslib\tslib.js:112:31
+     21   24.7%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\tslib\tslib.js:111:50
+     17   81.0%          LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+     17  100.0%            LazyCompile: ~sleep.then D:\node\calendar-model-setup\dist\src\shared\ms.graph.helper.js:11:21
+      2    9.5%          LazyCompile: ~router.get D:\node\calendar-model-setup\dist\src\routes\Users.js:13:96
+      1   50.0%            LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+      1   50.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:73
+      1    4.8%          LazyCompile: ~__awaiter D:\node\calendar-model-setup\node_modules\tslib\tslib.js:109:26
+      1  100.0%            LazyCompile: ~router.get D:\node\calendar-model-setup\dist\src\routes\Users.js:13:96
+      1    4.8%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:73
+      1  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\tslib\tslib.js:111:50
+     11   12.9%        LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+     11  100.0%          LazyCompile: ~sleep.then D:\node\calendar-model-setup\dist\src\shared\ms.graph.helper.js:11:21
+      3    3.5%        LazyCompile: ~router.get D:\node\calendar-model-setup\dist\src\routes\Users.js:13:96
+      3  100.0%          LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+      3  100.0%            LazyCompile: ~sleep.then D:\node\calendar-model-setup\dist\src\shared\ms.graph.helper.js:11:21
+      2    2.4%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:73
+      2  100.0%          LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+     55    2.8%      LazyCompile: ~Socket._writeGeneric net.js:715:42
+     54   98.2%        LazyCompile: ~Socket._writev net.js:781:36
+     54  100.0%          LazyCompile: ~doWrite _stream_writable.js:388:17
+     54  100.0%            LazyCompile: ~clearBuffer _stream_writable.js:478:21
+      1    1.8%        LazyCompile: ~Socket._write net.js:786:35
+      1  100.0%          LazyCompile: ~Socket.write net.js:706:34
+      1  100.0%            LazyCompile: ~logRequest D:\node\calendar-model-setup\node_modules\morgan\index.js:116:25
+     47    2.4%      LazyCompile: ~Socket._destroy net.js:541:37
+     47  100.0%        LazyCompile: ~destroy internal/streams/destroy.js:4:17
+     22   46.8%          LazyCompile: ~socketOnTimeout _http_server.js:420:25
+     22  100.0%            LazyCompile: ~Socket._onTimeout net.js:410:39
+     21   44.7%          LazyCompile: ~onread net.js:583:16
+      4    8.5%          LazyCompile: ~ontimeout timers.js:492:19
+     43    2.2%      LazyCompile: ~stat module.js:50:14
+     23   53.5%        LazyCompile: ~Module._findPath module.js:182:28
+     23  100.0%          LazyCompile: ~Module._resolveFilename module.js:515:35
+     23  100.0%            LazyCompile: ~Module._load module.js:448:24
+     20   46.5%        LazyCompile: ~tryFile module.js:155:17
+     15   75.0%          LazyCompile: ~tryExtensions module.js:170:23
+     15  100.0%            LazyCompile: ~Module._findPath module.js:182:28
+      5   25.0%          LazyCompile: ~tryPackage module.js:135:20
+      5  100.0%            LazyCompile: ~Module._findPath module.js:182:28
+     42    2.2%      LazyCompile: ~fs.openSync fs.js:642:23
+     42  100.0%        LazyCompile: ~fs.readFileSync fs.js:548:27
+     40   95.2%          LazyCompile: ~Module._extensions..js module.js:662:37
+     40  100.0%            LazyCompile: ~Module.load module.js:557:33
+      2    4.8%          LazyCompile: ~Module._extensions..json module.js:669:39
+      2  100.0%            LazyCompile: ~Module.load module.js:557:33
+     37    1.9%      LazyCompile: ~stringify D:\node\calendar-model-setup\node_modules\express\lib\response.js:1118:20
+     23   62.2%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\Users.js:13:162
+     18   78.3%          LazyCompile: ~fulfilled D:\node\calendar-model-setup\node_modules\tslib\tslib.js:112:31
+     14   37.8%        LazyCompile: ~jsonp D:\node\calendar-model-setup\node_modules\express\lib\response.js:282:27
+     14  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\Users.js:13:162
+     14  100.0%            LazyCompile: ~fulfilled D:\node\calendar-model-setup\node_modules\tslib\tslib.js:112:31
+     37    1.9%      LazyCompile: ~fulfilled D:\node\calendar-model-setup\node_modules\tslib\tslib.js:112:31
+     31    1.6%      LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\tslib\tslib.js:111:50
+     11   35.5%        LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+      8   25.8%        LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+      8  100.0%          LazyCompile: ~sleep.then D:\node\calendar-model-setup\dist\src\shared\ms.graph.helper.js:11:21
+      3    9.7%        LazyCompile: ~router.get D:\node\calendar-model-setup\dist\src\routes\Users.js:13:96
+      2   66.7%          LazyCompile: ~next D:\node\calendar-model-setup\node_modules\express\lib\router\route.js:114:16
+      1   50.0%            LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+      1   50.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:73
+      1   33.3%          LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+      1  100.0%            LazyCompile: ~sleep.then D:\node\calendar-model-setup\dist\src\shared\ms.graph.helper.js:11:21
+      3    9.7%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:73
+      3  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\tslib\tslib.js:111:50
+      3  100.0%            LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+      3    9.7%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:6
+      3  100.0%          LazyCompile: ~enqeueRequest D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:15:23
+      2   66.7%            LazyCompile: ~next D:\node\calendar-model-setup\node_modules\express\lib\router\route.js:114:16
+      1   33.3%            LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+      2    6.5%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\Users.js:13:162
+      2  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\tslib\tslib.js:111:50
+      1   50.0%            LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+      1   50.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:73
+      1    3.2%        LazyCompile: ~__awaiter D:\node\calendar-model-setup\node_modules\tslib\tslib.js:109:26
+      1  100.0%          LazyCompile: ~router.get D:\node\calendar-model-setup\dist\src\routes\Users.js:13:96
+      1  100.0%            LazyCompile: ~next D:\node\calendar-model-setup\node_modules\express\lib\router\route.js:114:16
+     31    1.6%      LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\daos\User\UserDao.mock.js:30:66
+     15   48.4%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\tslib\tslib.js:111:50
+     14   93.3%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\Users.js:13:162
+     14  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\tslib\tslib.js:111:50
+      1    6.7%          LazyCompile: ~__awaiter D:\node\calendar-model-setup\node_modules\tslib\tslib.js:109:26
+      1  100.0%            LazyCompile: ~getAll D:\node\calendar-model-setup\dist\src\daos\User\UserDao.mock.js:26:11
+      7   22.6%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\Users.js:13:162
+      4   57.1%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:73
+      4  100.0%            LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+      3   42.9%          LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+      3  100.0%            LazyCompile: ~sleep.then D:\node\calendar-model-setup\dist\src\shared\ms.graph.helper.js:11:21
+      4   12.9%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:73
+      4  100.0%          LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+      2    6.5%        LazyCompile: ~getAll D:\node\calendar-model-setup\dist\src\daos\User\UserDao.mock.js:26:11
+      2  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\Users.js:13:162
+      2  100.0%            LazyCompile: ~router.get D:\node\calendar-model-setup\dist\src\routes\Users.js:13:96
+      2    6.5%        LazyCompile: ~enqeueRequest D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:15:23
+      2  100.0%          LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+      1    3.2%        LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+      1  100.0%          LazyCompile: ~sleep.then D:\node\calendar-model-setup\dist\src\shared\ms.graph.helper.js:11:21
+     29    1.5%      LazyCompile: ~readFileAfterOpen fs.js:416:27
+     28    1.4%      LazyCompile: ~Resolver dns.js:220:14
+     28  100.0%        Script: ~<anonymous> dns.js:1:11
+     28  100.0%          LazyCompile: ~NativeModule.compile bootstrap_node.js:601:44
+     28  100.0%            LazyCompile: ~NativeModule.require bootstrap_node.js:533:34
+     27    1.4%      LazyCompile: ~randomFillSync crypto.js:762:24
+     27  100.0%        LazyCompile: ~rng D:\node\calendar-model-setup\node_modules\uuid\dist\rng.js:14:13
+     27  100.0%          LazyCompile: ~v4 D:\node\calendar-model-setup\node_modules\uuid\dist\v4.js:14:12
+     27  100.0%            LazyCompile: ~enqeueRequest D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:15:23
+     26    1.3%      LazyCompile: ~readPackage module.js:113:21
+     26  100.0%        LazyCompile: ~tryPackage module.js:135:20
+     26  100.0%          LazyCompile: ~Module._findPath module.js:182:28
+     26  100.0%            LazyCompile: ~Module._resolveFilename module.js:515:35
+     23    1.2%      LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:73
+     12   52.2%        LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+      9   39.1%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\tslib\tslib.js:111:50
+      6   66.7%          LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+      2   22.2%          LazyCompile: ~__awaiter D:\node\calendar-model-setup\node_modules\tslib\tslib.js:109:26
+      2  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:6
+      1   11.1%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:6
+      1  100.0%            LazyCompile: ~enqeueRequest D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:15:23
+      1    4.3%        LazyCompile: ~enqeueRequest D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:15:23
+      1  100.0%          LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+      1    4.3%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:6
+      1  100.0%          LazyCompile: ~enqeueRequest D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:15:23
+      1  100.0%            LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+     22    1.1%      LazyCompile: ~expressInit D:\node\calendar-model-setup\node_modules\express\lib\middleware\init.js:29:30
+     18   81.8%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+     16   88.9%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+     12   75.0%            LazyCompile: ~emitTwo events.js:124:17
+      4   25.0%            LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\application.js:158:29
+      2   11.1%          LazyCompile: ~query D:\node\calendar-model-setup\node_modules\express\lib\middleware\query.js:39:24
+      2  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      2    9.1%        LazyCompile: ~app D:\node\calendar-model-setup\node_modules\express\lib\express.js:38:21
+      2  100.0%          LazyCompile: ~emitTwo events.js:124:17
+      2  100.0%            LazyCompile: ~parserOnIncoming _http_server.js:596:26
+      1    4.5%        LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\application.js:158:29
+      1  100.0%          LazyCompile: ~app D:\node\calendar-model-setup\node_modules\express\lib\express.js:38:21
+      1  100.0%            LazyCompile: ~emitTwo events.js:124:17
+      1    4.5%        LazyCompile: ~emitTwo events.js:124:17
+      1  100.0%          LazyCompile: ~parserOnIncoming _http_server.js:596:26
+     20    1.0%      LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+     14   70.0%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+     11   78.6%          LazyCompile: ~urlencodedParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\urlencoded.js:79:36
+     11  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      3   21.4%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      3  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      6   30.0%        LazyCompile: ~cookieParser D:\node\calendar-model-setup\node_modules\cookie-parser\index.js:44:32
+      6  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      6  100.0%            LazyCompile: ~urlencodedParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\urlencoded.js:79:36
+
+   2263    1.5%  UNKNOWN
+     93    4.1%    LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\Users.js:13:162
+     65   69.9%      LazyCompile: ~fulfilled D:\node\calendar-model-setup\node_modules\tslib\tslib.js:112:31
+      4    4.3%      LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\tslib\tslib.js:111:50
+      2   50.0%        LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+      2  100.0%          LazyCompile: ~sleep.then D:\node\calendar-model-setup\dist\src\shared\ms.graph.helper.js:11:21
+      1   25.0%        LazyCompile: ~router.get D:\node\calendar-model-setup\dist\src\routes\Users.js:13:96
+      1  100.0%          LazyCompile: ~next D:\node\calendar-model-setup\node_modules\express\lib\router\route.js:114:16
+      1  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:73
+      1   25.0%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:20:73
+      1  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\tslib\tslib.js:111:50
+      1  100.0%            LazyCompile: ~rateLimiter.consume.then D:\node\calendar-model-setup\dist\src\routes\incoming-request-limiter.js:12:15
+      2    2.2%      LazyCompile: ~ms_graph_helper_1.getAccessToken D:\node\calendar-model-setup\dist\src\routes\enqueComponent.js:26:50
+      2  100.0%        LazyCompile: ~sleep.then D:\node\calendar-model-setup\dist\src\shared\ms.graph.helper.js:11:21
+     74    3.3%    LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+     45   60.8%      LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+     23   51.1%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+     15   65.2%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      9   60.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      3   20.0%            LazyCompile: ~urlencodedParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\urlencoded.js:79:36
+      3   20.0%            LazyCompile: ~cookieParser D:\node\calendar-model-setup\node_modules\cookie-parser\index.js:44:32
+      4   17.4%          LazyCompile: ~urlencodedParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\urlencoded.js:79:36
+      4  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      4   17.4%          LazyCompile: ~cookieParser D:\node\calendar-model-setup\node_modules\cookie-parser\index.js:44:32
+      4  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+     16   35.6%        LazyCompile: ~urlencodedParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\urlencoded.js:79:36
+     16  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+     16  100.0%            LazyCompile: ~jsonParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\json.js:98:30
+      3    6.7%        LazyCompile: ~cookieParser D:\node\calendar-model-setup\node_modules\cookie-parser\index.js:44:32
+      3  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      3  100.0%            LazyCompile: ~urlencodedParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\urlencoded.js:79:36
+      2    4.4%        LazyCompile: ~emitTwo events.js:124:17
+      2  100.0%          LazyCompile: ~parserOnIncoming _http_server.js:596:26
+      1    2.2%        LazyCompile: ~logger D:\node\calendar-model-setup\node_modules\morgan\index.js:103:26
+      1  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      1  100.0%            LazyCompile: ~cookieParser D:\node\calendar-model-setup\node_modules\cookie-parser\index.js:44:32
+      6    8.1%      LazyCompile: ~emitTwo events.js:124:17
+      6  100.0%        LazyCompile: ~parserOnIncoming _http_server.js:596:26
+      5    6.8%      LazyCompile: ~urlencodedParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\urlencoded.js:79:36
+      5  100.0%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      5  100.0%          LazyCompile: ~jsonParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\json.js:98:30
+      5  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      4    5.4%      LazyCompile: ~cookieParser D:\node\calendar-model-setup\node_modules\cookie-parser\index.js:44:32
+      4  100.0%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      4  100.0%          LazyCompile: ~urlencodedParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\urlencoded.js:79:36
+      4  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      3    4.1%      LazyCompile: ~logger D:\node\calendar-model-setup\node_modules\morgan\index.js:103:26
+      3  100.0%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      3  100.0%          LazyCompile: ~cookieParser D:\node\calendar-model-setup\node_modules\cookie-parser\index.js:44:32
+      3  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      3    4.1%      LazyCompile: ~expressInit D:\node\calendar-model-setup\node_modules\express\lib\middleware\init.js:29:30
+      2   66.7%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      2  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      1   50.0%            LazyCompile: ~emitTwo events.js:124:17
+      1   50.0%            LazyCompile: ~app D:\node\calendar-model-setup\node_modules\express\lib\express.js:38:21
+      1   33.3%        LazyCompile: ~newFn D:\node\calendar-model-setup\node_modules\express-async-errors\index.js:15:31
+      1  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      1  100.0%            LazyCompile: ~query D:\node\calendar-model-setup\node_modules\express\lib\middleware\query.js:39:24
+      2    2.7%      LazyCompile: ~process_params D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:327:47
+      2  100.0%        LazyCompile: ~next D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:176:16
+      1   50.0%          LazyCompile: ~urlencodedParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\urlencoded.js:79:36
+      1  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      1   50.0%          LazyCompile: ~logger D:\node\calendar-model-setup\node_modules\morgan\index.js:103:26
+      1  100.0%            LazyCompile: ~trim_prefix D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:288:23
+      2    2.7%      LazyCompile: ~jsonParser D:\node\calendar-model-setup\node_modules\body-parser\lib\types\json.js:98:30
+      2  100.0%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      2  100.0%          LazyCompile: ~expressInit D:\node\calendar-model-setup\node_modules\express\lib\middleware\init.js:29:30
+      2  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      1    1.4%      LazyCompile: ~query D:\node\calendar-model-setup\node_modules\express\lib\middleware\query.js:39:24
+      1  100.0%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      1  100.0%          LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\application.js:158:29
+      1  100.0%            LazyCompile: ~app D:\node\calendar-model-setup\node_modules\express\lib\express.js:38:21
+      1    1.4%      LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:136:31
+      1  100.0%        LazyCompile: ~router D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:46:18
+      1  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      1  100.0%            LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:136:31
+      1    1.4%      LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\application.js:158:29
+      1  100.0%        LazyCompile: ~app D:\node\calendar-model-setup\node_modules\express\lib\express.js:38:21
+      1  100.0%          LazyCompile: ~emitTwo events.js:124:17
+      1  100.0%            LazyCompile: ~parserOnIncoming _http_server.js:596:26
+      1    1.4%      LazyCompile: ~app D:\node\calendar-model-setup\node_modules\express\lib\express.js:38:21
+      1  100.0%        LazyCompile: ~emitTwo events.js:124:17
+      1  100.0%          LazyCompile: ~parserOnIncoming _http_server.js:596:26
+     68    3.0%    LazyCompile: ~fulfilled D:\node\calendar-model-setup\node_modules\tslib\tslib.js:112:31
+     58    2.6%    LazyCompile: ~logRequest D:\node\calendar-model-setup\node_modules\morgan\index.js:116:25
+     54   93.1%      LazyCompile: ~listener D:\node\calendar-model-setup\node_modules\on-finished\index.js:161:20
+     53   98.1%        LazyCompile: ~onFinish D:\node\calendar-model-setup\node_modules\on-finished\index.js:95:20
+     43   81.1%          LazyCompile: ~callback D:\node\calendar-model-setup\node_modules\ee-first\index.js:53:20
+     43  100.0%            LazyCompile: ~onevent D:\node\calendar-model-setup\node_modules\ee-first\index.js:81:26
+     10   18.9%          LazyCompile: ~onevent D:\node\calendar-model-setup\node_modules\ee-first\index.js:81:26
+      6   60.0%            LazyCompile: ~onFinish _http_outgoing.js:719:18
+      1    1.9%        LazyCompile: ~callback D:\node\calendar-model-setup\node_modules\ee-first\index.js:53:20
+      1  100.0%          LazyCompile: ~onevent D:\node\calendar-model-setup\node_modules\ee-first\index.js:81:26
+      1  100.0%            LazyCompile: ~onFinish _http_outgoing.js:719:18
+      4    6.9%      LazyCompile: ~onFinish D:\node\calendar-model-setup\node_modules\on-finished\index.js:95:20
+      2   50.0%        LazyCompile: ~onevent D:\node\calendar-model-setup\node_modules\ee-first\index.js:81:26
+      2   50.0%        LazyCompile: ~callback D:\node\calendar-model-setup\node_modules\ee-first\index.js:53:20
+      2  100.0%          LazyCompile: ~onFinish _http_outgoing.js:719:18
+     55    2.4%    LazyCompile: ~ontimeout timers.js:492:19
+      1    1.8%      LazyCompile: ~tryOnTimeout timers.js:315:22
+      1  100.0%        LazyCompile: ~listOnTimeout timers.js:231:23
+     38    1.7%    LazyCompile: ~parserOnIncoming _http_server.js:596:26
+      6   15.8%      LazyCompile: ~parserOnHeadersComplete _http_common.js:62:33
+     27    1.2%    LazyCompile: ~expressInit D:\node\calendar-model-setup\node_modules\express\lib\middleware\init.js:29:30
+     17   63.0%      LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+     12   70.6%        LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      9   75.0%          LazyCompile: ~emitTwo events.js:124:17
+      9  100.0%            LazyCompile: ~parserOnIncoming _http_server.js:596:26
+      2   16.7%          LazyCompile: ~app D:\node\calendar-model-setup\node_modules\express\lib\express.js:38:21
+      2  100.0%            LazyCompile: ~emitTwo events.js:124:17
+      1    8.3%          LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\application.js:158:29
+      1  100.0%            LazyCompile: ~app D:\node\calendar-model-setup\node_modules\express\lib\express.js:38:21
+      5   29.4%        LazyCompile: ~query D:\node\calendar-model-setup\node_modules\express\lib\middleware\query.js:39:24
+      5  100.0%          LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      5  100.0%            LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\application.js:158:29
+      6   22.2%      LazyCompile: ~emitTwo events.js:124:17
+      6  100.0%        LazyCompile: ~parserOnIncoming _http_server.js:596:26
+      1    3.7%      LazyCompile: ~trim_prefix D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:288:23
+      1  100.0%        LazyCompile: ~query D:\node\calendar-model-setup\node_modules\express\lib\middleware\query.js:39:24
+      1  100.0%          LazyCompile: ~trim_prefix D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:288:23
+      1  100.0%            LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:136:31
+      1    3.7%      LazyCompile: ~query D:\node\calendar-model-setup\node_modules\express\lib\middleware\query.js:39:24
+      1  100.0%        LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:136:31
+      1  100.0%          LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\application.js:158:29
+      1  100.0%            LazyCompile: ~app D:\node\calendar-model-setup\node_modules\express\lib\express.js:38:21
+      1    3.7%      LazyCompile: ~newFn D:\node\calendar-model-setup\node_modules\express-async-errors\index.js:15:31
+      1  100.0%        LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          LazyCompile: ~trim_prefix D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:288:23
+      1  100.0%            LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\express\lib\router\index.js:275:64
+      1    3.7%      LazyCompile: ~handle D:\node\calendar-model-setup\node_modules\express\lib\application.js:158:29
+      1  100.0%        LazyCompile: ~app D:\node\calendar-model-setup\node_modules\express\lib\express.js:38:21
+      1  100.0%          LazyCompile: ~emitTwo events.js:124:17
+      1  100.0%            LazyCompile: ~parserOnIncoming _http_server.js:596:26
+     27    1.2%    LazyCompile: ~emitTwo events.js:124:17
+     27  100.0%      LazyCompile: ~parserOnIncoming _http_server.js:596:26
+      1    3.7%        LazyCompile: ~parserOnHeadersComplete _http_common.js:62:33
+

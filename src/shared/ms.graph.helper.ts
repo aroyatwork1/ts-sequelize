@@ -8,24 +8,24 @@ const limiter = new RateLimiter(15, 'second', true);
 const tokenQueue =  new q(helper, { concurrent: 1 }); // new q(helper, 1);
 
 export function getAccessToken(cb: any) {
-    tokenQueue
-        .push({})
-        .on('finish', (result: any[]) => {
-            cb(null, {})
-        })
-        .on('failed', (err: Error) => {
-            cb(err, null);
-        });
+    // tokenQueue
+    //     .push({})
+    //     .on('finish', (result: any[]) => {
+    //         cb(null, {})
+    //     })
+    //     .on('failed', (err: Error) => {
+    //         cb(err, null);
+    //     });
 
     // tokenQueue.push({}, (err: Error) => {
     //     cb(err, {});
     // });
 
-    // sleep(1.5).then(() => { // 2000 ms delay for testing purpose
-    //     cb(null, []); // Send some dummy data
-    // }).catch((e) => {
-    //     cb(new Error('400'), null);
-    // });
+    sleep(1.5).then(() => { // 2000 ms delay for testing purpose
+        cb(null, []); // Send some dummy data
+    }).catch((e) => {
+        cb(new Error('400'), null);
+    });
 }
 
 function getRandInt(min: number, max: number) {

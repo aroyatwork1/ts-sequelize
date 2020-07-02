@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { EventEmitter } from 'events';
 
-const q = require("async").queue; // require('better-queue');
+const q = require('fastq'); // require("async").queue; // require('better-queue');
 
 export class DelegateQueue {
     private static _queue: any;
@@ -16,7 +16,7 @@ export class DelegateQueue {
         DelegateQueue._delegateEmail = delegateEmail.trim().toLowerCase();
 
         if (!DelegateQueue._queue) {
-            DelegateQueue._queue = new q(cb, 1); // new q(cb, { concurrent: 1 });
+            DelegateQueue._queue = q(cb, 1); // new q(cb, 1); // new q(cb, { concurrent: 1 });
         }
     }
 

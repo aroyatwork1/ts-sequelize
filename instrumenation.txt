@@ -1,0 +1,111 @@
+Statistical profiling result from isolate-00000190AA05A040-v8.log, (232707 ticks, 8 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  231766   99.6%          C:\WINDOWS\SYSTEM32\ntdll.dll
+    659    0.3%          D:\Installs\node\node.exe
+     20    0.0%          C:\WINDOWS\System32\KERNEL32.DLL
+     12    0.0%          C:\WINDOWS\System32\KERNELBASE.dll
+      1    0.0%          D:\Installs\Cmder\vendor\conemu-maximus5\ConEmu\ConEmuHk64.dll
+      1    0.0%          C:\WINDOWS\SYSTEM32\WINMM.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     50    0.0%   20.2%  LazyCompile: ~listOnTimeout timers.js:231:23
+     32    0.0%   12.9%  Builtin: InterpreterEntryTrampoline
+     12    0.0%    4.8%  Builtin: Call_ReceiverIsAny
+     12    0.0%    4.8%  Builtin: CallFunction_ReceiverIsAny
+      9    0.0%    3.6%  StoreIC: A store IC from the snapshot
+      9    0.0%    3.6%  LazyCompile: ~peek internal/linkedlist.js:9:14
+      8    0.0%    3.2%  LazyCompile: ~tryOnTimeout timers.js:315:22
+      5    0.0%    2.0%  LazyCompile: ~ok assert.js:74:12
+      5    0.0%    2.0%  LazyCompile: ~_removeIdleTimer.setTimeout D:\node\calendar-model-setup\node_modules\sequelize-pool\lib\Pool.js:192:42
+      4    0.0%    1.6%  LazyCompile: ~remove internal/linkedlist.js:15:16
+      4    0.0%    1.6%  LazyCompile: ~emit events.js:156:44
+      4    0.0%    1.6%  Builtin: LoadIC_Noninlined
+      3    0.0%    1.2%  Stub: JSEntryStub
+      3    0.0%    1.2%  Stub: CEntryStub
+      3    0.0%    1.2%  LazyCompile: ~validateAsyncId internal/async_hooks.js:111:25
+      3    0.0%    1.2%  LazyCompile: ~debugs.(anonymous function) util.js:245:29
+      3    0.0%    1.2%  LazyCompile: ~_removeIdle D:\node\calendar-model-setup\node_modules\sequelize-pool\lib\Pool.js:145:14
+      3    0.0%    1.2%  Builtin: KeyedLoadIC_Megamorphic
+      2    0.0%    0.8%  LazyCompile: ~validateHeader _http_outgoing.js:485:24
+      2    0.0%    0.8%  LazyCompile: ~pushAsyncIds internal/async_hooks.js:349:22
+      2    0.0%    0.8%  LazyCompile: ~emitBeforeScript internal/async_hooks.js:314:26
+      2    0.0%    0.8%  LazyCompile: ~basename path.js:817:30
+      2    0.0%    0.8%  LazyCompile: ~addToGuesses D:\node\calendar-model-setup\node_modules\moment-timezone\moment-timezone.js:323:24
+      2    0.0%    0.8%  LazyCompile: ~Socket._onTimeout net.js:410:39
+      2    0.0%    0.8%  LazyCompile: *normalizeStringWin32 path.js:33:30
+      2    0.0%    0.8%  KeyedStoreIC: A keyed store IC from the snapshot
+      2    0.0%    0.8%  KeyedLoadIC: A keyed load IC from the snapshot
+      2    0.0%    0.8%  Builtin: StringPrototypeSlice
+      2    0.0%    0.8%  Builtin: StringEqual
+      1    0.0%    0.4%  Stub: RecordWriteStub
+      1    0.0%    0.4%  Stub: ElementsTransitionAndStoreStub
+      1    0.0%    0.4%  LazyCompile: ~updateStatsForEndedTask D:\node\calendar-model-setup\node_modules\better-queue\lib\queue.js:587:42
+      1    0.0%    0.4%  LazyCompile: ~tickDone internal/process/next_tick.js:89:20
+      1    0.0%    0.4%  LazyCompile: ~stringSlice buffer.js:555:21
+      1    0.0%    0.4%  LazyCompile: ~socketOnTimeout _http_server.js:420:25
+      1    0.0%    0.4%  LazyCompile: ~router.get D:\node\calendar-model-setup\dist\src\routes\Users.js:13:96
+      1    0.0%    0.4%  LazyCompile: ~resolve path.js:183:28
+      1    0.0%    0.4%  LazyCompile: ~putTask D:\node\calendar-model-setup\node_modules\better-queue\lib\queue.js:375:26
+      1    0.0%    0.4%  LazyCompile: ~ontimeout timers.js:492:19
+      1    0.0%    0.4%  LazyCompile: ~onFinish D:\node\calendar-model-setup\node_modules\on-finished\index.js:95:20
+      1    0.0%    0.4%  LazyCompile: ~insert timers.js:167:16
+      1    0.0%    0.4%  LazyCompile: ~initSocketHandle net.js:168:26
+      1    0.0%    0.4%  LazyCompile: ~fs.readFileSync fs.js:548:27
+      1    0.0%    0.4%  LazyCompile: ~emitReadable _stream_readable.js:498:22
+      1    0.0%    0.4%  LazyCompile: ~deleteTimersList timers.js:220:26
+      1    0.0%    0.4%  LazyCompile: ~debug D:\node\calendar-model-setup\node_modules\debug\src\debug.js:65:17
+      1    0.0%    0.4%  LazyCompile: ~append internal/linkedlist.js:29:16
+      1    0.0%    0.4%  LazyCompile: ~app.(anonymous function) D:\node\calendar-model-setup\node_modules\express\lib\application.js:473:25
+      1    0.0%    0.4%  LazyCompile: ~_scheduleRemoveIdle D:\node\calendar-model-setup\node_modules\sequelize-pool\lib\Pool.js:189:22
+      1    0.0%    0.4%  LazyCompile: ~_combinedTickCallback internal/process/next_tick.js:130:33
+      1    0.0%    0.4%  LazyCompile: ~WritableState _stream_writable.js:41:23
+      1    0.0%    0.4%  LazyCompile: ~Uint8Array native typedarray.js:158:31
+      1    0.0%    0.4%  LazyCompile: ~Socket._destroy net.js:541:37
+      1    0.0%    0.4%  LazyCompile: ~Readable.read _stream_readable.js:365:35
+      1    0.0%    0.4%  LazyCompile: ~Queue._queueTask D:\node\calendar-model-setup\node_modules\better-queue\lib\queue.js:363:39
+      1    0.0%    0.4%  LazyCompile: ~NativeModule.exists bootstrap_node.js:567:33
+      1    0.0%    0.4%  LazyCompile: ~Module module.js:69:16
+      1    0.0%    0.4%  LazyCompile: ~EventEmitter.init events.js:62:29
+      1    0.0%    0.4%  LazyCompile: ~ConvertToString native array.js:132:25
+      1    0.0%    0.4%  LazyCompile: ~Buffer.concat buffer.js:425:25
+      1    0.0%    0.4%  LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\psl\index.js:14:61
+      1    0.0%    0.4%  LazyCompile: ~<anonymous> D:\node\calendar-model-setup\node_modules\better-queue\lib\worker.js:144:47
+      1    0.0%    0.4%  LazyCompile: ~<anonymous> D:\node\calendar-model-setup\dist\src\routes\Users.js:13:162
+      1    0.0%    0.4%  LazyCompile: *pushAsyncIds internal/async_hooks.js:349:22
+      1    0.0%    0.4%  Builtin: StringPrototypeCharCodeAt
+      1    0.0%    0.4%  Builtin: StoreICStrict_Uninitialized
+      1    0.0%    0.4%  Builtin: RegExpPrototypeTest
+      1    0.0%    0.4%  Builtin: LoadIC_Uninitialized
+      1    0.0%    0.4%  Builtin: InterpreterPushUndefinedAndArgsThenCall
+      1    0.0%    0.4%  Builtin: FunctionPrototypeCall
+      1    0.0%    0.4%  Builtin: FastNewObject
+      1    0.0%    0.4%  Builtin: ArrayMap
+      1    0.0%    0.4%  Builtin: ArrayForEach
+      1    0.0%    0.4%  Builtin: ArgumentsAdaptorTrampoline
+      1    0.0%    0.4%  Builtin: AdaptorWithExitFrame
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+    240    0.1%   96.8%  JavaScript
+      0    0.0%    0.0%  C++
+      9    0.0%    3.6%  GC
+  232459   99.9%          Shared libraries
+      8    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  231766   99.6%  C:\WINDOWS\SYSTEM32\ntdll.dll
+

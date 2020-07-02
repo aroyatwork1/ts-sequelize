@@ -28,31 +28,31 @@ export function enqeueRequest(req: Request, res: Response, next: any) {
         if (index % 2 == 0) { // Simulating scenario when Token has not expired
             next();
         } else { // Simulating scenario when token has expired
-            const q: DelegateQueue = DelegateQueueManager.getQueue(delegateAccounts[index].delegateEmail, helper);
+            // const q: DelegateQueue = DelegateQueueManager.getQueue(delegateAccounts[index].delegateEmail, helper);
 
             (() => {
-                console.log(`[${index} -> ${uuid}]::[${process.pid}]::[${new Date().toISOString()}] ********** Enqueueing request for delegate account ${delegateAccounts[index].delegateEmail} **********`);
-                q.enqueue(req, res)
-                .on('finish', (result: any) => {
-                    // After the fetch from MS-Graph has been completed and db has been updated, we will
-                    // continue to the endpoint handler as usual, which will fetch the token from db and send it user
-                    console.log(`[[${index} -> ${uuid}]::${process.pid}]::[${new Date().toISOString()}] ********** Request completed for delegate account ${delegateAccounts[index].delegateEmail} **********`);
-                    next();
-                })
-                .on('failed', (err: Error) => {
-                    console.error(`[ERROR]::[[${index} -> ${uuid}]::${process.pid}]::[${new Date().toISOString()}] ********** Request completed for delegate account ${delegateAccounts[index].delegateEmail} **********`);
-                    console.error(err);
-                    
-                    if (err.message == '429') {
-                        return res.status(429).send('Too many request');
-                    } else {
-                        return res.status(400).send(err.message);
-                    }
-                });
-
-                // getAccessToken((err: Error, data: any) => {
+                // console.log(`[${index} -> ${uuid}]::[${process.pid}]::[${new Date().toISOString()}] ********** Enqueueing request for delegate account ${delegateAccounts[index].delegateEmail} **********`);
+                // q.enqueue(req, res)
+                // .on('finish', (result: any) => {
+                //     // After the fetch from MS-Graph has been completed and db has been updated, we will
+                //     // continue to the endpoint handler as usual, which will fetch the token from db and send it user
+                //     console.log(`[[${index} -> ${uuid}]::${process.pid}]::[${new Date().toISOString()}] ********** Request completed for delegate account ${delegateAccounts[index].delegateEmail} **********`);
                 //     next();
+                // })
+                // .on('failed', (err: Error) => {
+                //     console.error(`[ERROR]::[[${index} -> ${uuid}]::${process.pid}]::[${new Date().toISOString()}] ********** Request completed for delegate account ${delegateAccounts[index].delegateEmail} **********`);
+                //     console.error(err);
+                    
+                //     if (err.message == '429') {
+                //         return res.status(429).send('Too many request');
+                //     } else {
+                //         return res.status(400).send(err.message);
+                //     }
                 // });
+
+                getAccessToken((err: Error, data: any) => {
+                    next();
+                });
 
             })();
         }
