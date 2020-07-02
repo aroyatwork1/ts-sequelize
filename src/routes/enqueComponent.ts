@@ -41,12 +41,19 @@ export function enqeueRequest(req: Request, res: Response, next: any) {
                 })
                 .on('failed', (err: Error) => {
                     console.error(`[ERROR]::[[${index} -> ${uuid}]::${process.pid}]::[${new Date().toISOString()}] ********** Request completed for delegate account ${delegateAccounts[index].delegateEmail} **********`);
+                    console.error(err);
+                    
                     if (err.message == '429') {
                         return res.status(429).send('Too many request');
                     } else {
                         return res.status(400).send(err.message);
                     }
                 });
+
+                // getAccessToken((err: Error, data: any) => {
+                //     next();
+                // });
+
             })();
         }
     })(index, uuid);

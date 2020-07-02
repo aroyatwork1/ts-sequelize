@@ -1,11 +1,11 @@
 console.log(" M S   G R A P H   H E L P E R    I N I T");
 
-const q = require('better-queue');
+const q = require('better-queue'); // require("async").queue;
 
 import { RateLimiter } from "limiter";
 
 const limiter = new RateLimiter(15, 'second', true);
-const tokenQueue = new q(helper, { concurrent: 1 });
+const tokenQueue =  new q(helper, { concurrent: 1 }); // new q(helper, 1);
 
 export function getAccessToken(cb: any) {
     tokenQueue
@@ -16,6 +16,16 @@ export function getAccessToken(cb: any) {
         .on('failed', (err: Error) => {
             cb(err, null);
         });
+
+    // tokenQueue.push({}, (err: Error) => {
+    //     cb(err, {});
+    // });
+
+    // sleep(1.5).then(() => { // 2000 ms delay for testing purpose
+    //     cb(null, []); // Send some dummy data
+    // }).catch((e) => {
+    //     cb(new Error('400'), null);
+    // });
 }
 
 function getRandInt(min: number, max: number) {
@@ -39,7 +49,7 @@ function helper(input: any, cb: any) {
         } else {
             // Simulating MS Graph API
             // await sleep(getRandInt(2, 5));
-            sleep(1).then(() => { // 2000 ms delay for testing purpose
+            sleep(2).then(() => { // 2000 ms delay for testing purpose
                 cb(null, []); // Send some dummy data
             }).catch((e) => {
                 cb(new Error('400'), null);
