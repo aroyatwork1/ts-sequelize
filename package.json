@@ -25,7 +25,7 @@
     "@server": "dist/Server"
   },
   "dependencies": {
-    "async": "3.2.0",
+    "async": "3.2.2",
     "better-queue": "3.8.10",
     "command-line-args": "5.1.1",
     "cookie-parser": "1.4.5",
